@@ -40,7 +40,7 @@ var totalTaxes = 0.0;
 foreach(var item in person)
 {
 	Console.WriteLine($"{item.Name}: $ {item.PersonTax():F2}");
-	totalTaxes += (double)item.AnnualIncome;
+	totalTaxes += (double)item.AnnualIncome.GetValueOrDefault();
 }
 
 Console.WriteLine();
